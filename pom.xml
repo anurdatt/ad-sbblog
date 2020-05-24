@@ -3,8 +3,8 @@
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.example</groupId>
-  <artifactId>sb-blog</artifactId>
+  <groupId>org.anuran.springbootstudy</groupId>
+  <artifactId>ad-sbblog</artifactId>
   <version>1.0</version>
 
   <parent>
@@ -13,7 +13,7 @@
     <version>2.3.0.RELEASE</version>
     <relativePath/>
   </parent>
-  <name>sb-blog</name>
+  <name>ad-sbblog</name>
 
   <properties>
     <java.version>1.8</java.version>
@@ -33,7 +33,7 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
-    <dependency>
+    <!-- <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-thymeleaf</artifactId>
       <exclusions>
@@ -42,7 +42,7 @@
       		<artifactId>thymeleaf-layout-dialect</artifactId>
       	</exclusion>
       </exclusions>
-    </dependency>
+    </dependency> -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
@@ -52,6 +52,19 @@
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
     </dependency> -->
+    
+    <dependency>
+    	<groupId>org.apache.tomcat.embed</groupId>
+    	<artifactId>tomcat-embed-jasper</artifactId>
+	</dependency>
+  	<dependency>
+  		<groupId>javax.servlet</groupId>
+  		<artifactId>jstl</artifactId>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-data-jpa</artifactId>
+  	</dependency>
     <dependency>
   		<groupId>mysql</groupId>
   		<artifactId>mysql-connector-java</artifactId>
@@ -61,6 +74,10 @@
       <artifactId>HikariCP</artifactId>
     </dependency>
     <dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-lang3</artifactId>
+	</dependency>
+    <!-- <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>jquery</artifactId>
       <version>${webjars-jquery.version}</version>
@@ -79,8 +96,8 @@
     <groupId>org.webjars</groupId>
       <artifactId>webjars-locator</artifactId>
       <version>0.30</version>
-    </dependency>
-    <dependency>
+    </dependency> -->
+    <dependency> 
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-devtools</artifactId>
       <scope>runtime</scope>
