@@ -81,6 +81,7 @@ public class Main {
     } else {
       HikariConfig config = new HikariConfig();
       config.setJdbcUrl(dbUrl);
+      //config.setDriverClassName("com.mysql.jdbc.Driver");
       return new HikariDataSource(config);
     }
   }
