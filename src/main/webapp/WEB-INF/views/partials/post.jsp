@@ -26,6 +26,11 @@
 			</c:otherwise>
 		</c:choose>
 	</div>
+	<div class="post-tags clearfix">
+		<c:forEach var="tag" items="${post.tags}">
+			<div class="post-tag">${tag.name}</div>
+		</c:forEach>
+	</div>
 	<div class="v-margin-10 clearfix" >
 		
 		<c:if test="${!empty post.sourceCode}">

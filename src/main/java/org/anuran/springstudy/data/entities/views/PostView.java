@@ -18,6 +18,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
+import org.anuran.springstudy.data.entities.Tag;
+
 
 @Entity
 @Table(name = "V_POST")
@@ -26,7 +28,7 @@ public class PostView {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="POST_ID")
-	Integer postId;
+	private Integer postId;
 	
 	
 	@Column(name="TITLE")
@@ -50,12 +52,12 @@ public class PostView {
 	@Column(name="TEASER", columnDefinition="text")
 	private String teaser;
 
-	/*@ManyToMany(cascade=CascadeType.ALL)
+	@ManyToMany(cascade=CascadeType.ALL)
 	@JoinTable(name="POST_TAG", joinColumns= {@JoinColumn(name="POST_ID", referencedColumnName="POST_ID")},
 	inverseJoinColumns = {@JoinColumn(name="TAG_ID", referencedColumnName = "TAG_ID")})
 	private List<Tag> tags = new ArrayList<Tag>();
 	
-	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	/*@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinColumn(name="POST_ID")
 	@OrderBy("postedDt DESC")
 	private List<Comment> comments = new ArrayList<Comment>();*/
@@ -126,7 +128,7 @@ public class PostView {
 		this.teaser = teaser;
 	}
 
-	/*public List<Tag> getTags() {
+	public List<Tag> getTags() {
 		return tags;
 	}
 
@@ -134,7 +136,7 @@ public class PostView {
 		this.tags = tags;
 	}
 
-	public List<Comment> getComments() {
+	/*public List<Comment> getComments() {
 		return comments;
 	}
 
