@@ -15,13 +15,13 @@
 		<c:choose>
 			<c:when test="${tease}">
 			<div>
-				<c:out value="${post.teaser}"></c:out>
+				${post.teaser}
 				<a href="/post/${post.postId}">Continue Reading</a>
 			</div>
 			</c:when>
 			<c:otherwise>
 			<div>
-				<c:out value="${post.body}"></c:out>
+				${post.body}
 			</div>
 			</c:otherwise>
 		</c:choose>
