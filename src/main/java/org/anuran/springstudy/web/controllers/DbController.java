@@ -17,11 +17,6 @@ public class DbController {
 	@Autowired
 	private DataSource dataSource;
 
-	@RequestMapping("/")
-	String index() {
-		return "index";
-	}
-
 	@RequestMapping("/db")
 	String db(Model model) {
 		try (Connection connection = dataSource.getConnection()) {

@@ -2,6 +2,6 @@
 <html>
 <head></head>
 <body>
-<c:redirect url="/db"/>
+<c:redirect url="/blog"/>
 </body>
 </html>

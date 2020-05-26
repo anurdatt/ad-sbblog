@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"   
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd" version="2.0">
+
+	<tlib-version>1.2</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>sbTags</short-name>
+	<uri>http://simpleBlog.cloudfoundry.com/sbTags</uri>
+	<description>This tag lib supports common tags used across the simpleBlog web site.</description>
+	
+	<tag-file>
+		<name>template</name>
+		<path>/WEB-INF/tags/template.tag</path>
+	</tag-file>
+
+</taglib>
