@@ -1,7 +1,5 @@
 package org.anuran.springstudy.data.repositories;
 
-import java.util.List;
-
 import org.anuran.springstudy.data.entities.views.PostView;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -24,6 +22,6 @@ public interface PostViewRepository extends JpaRepository<PostView, Integer> {
 	 * @return
 	 */
 	@Query("select pv from PostView pv join pv.tags tgs where tgs.tagId = :tagId")
-	public List<PostView> findByTag(@Param("tagId") Integer tagId);
-	/*public Page<PostView> findByTag(@Param("tagId") Integer tagId, Pageable pageable);*/
+	//public List<PostView> findByTag(@Param("tagId") Integer tagId);
+	public Page<PostView> findByTag(@Param("tagId") Integer tagId, Pageable pageable);
 }

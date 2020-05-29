@@ -18,6 +18,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
+import org.anuran.springstudy.data.entities.Comment;
 import org.anuran.springstudy.data.entities.Tag;
 
 
@@ -57,10 +58,10 @@ public class PostView {
 	inverseJoinColumns = {@JoinColumn(name="TAG_ID", referencedColumnName = "TAG_ID")})
 	private List<Tag> tags = new ArrayList<Tag>();
 	
-	/*@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinColumn(name="POST_ID")
 	@OrderBy("postedDt DESC")
-	private List<Comment> comments = new ArrayList<Comment>();*/
+	private List<Comment> comments = new ArrayList<Comment>();
 	
 	public Integer getPostId() {
 		return postId;
@@ -136,12 +137,12 @@ public class PostView {
 		this.tags = tags;
 	}
 
-	/*public List<Comment> getComments() {
+	public List<Comment> getComments() {
 		return comments;
 	}
 
 	public void setComments(List<Comment> comments) {
 		this.comments = comments;
-	}*/
+	}
 	
 }

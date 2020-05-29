@@ -6,4 +6,4 @@
 <link href="/css/global.css" rel="stylesheet" />
 <link href="/css/structure.css" rel="stylesheet" />
 <link href="/css/nav.css" rel="stylesheet" />
-<!-- <link href="/css/control.css" rel="stylesheet" /> -->
+<link href="/css/control.css" rel="stylesheet" />

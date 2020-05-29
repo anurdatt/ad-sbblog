@@ -19,5 +19,24 @@
 			</c:out>
 		</div> --%>
 	</c:forEach>
+	
+	<div>
+		<%-- <c:if test="${!isLastPage}">
+			<span><a href="${nextPage}">Next 5 Entries </a> </span>
+		</c:if>
+		<c:if test="${prevPage > -1}">
+			<span><a href="${prevPage}">Previous 5 Entries </a> </span>
+		</c:if> --%>
+
+		<c:if test="${!isLastPage}">
+			<sbTags:control text="Next 5 Entries" href="${nextPage}"
+				classes="float-right shadow" imageClass="next-btn" shrinkwrap="true"
+				floatImage="right" />
+		</c:if>
+		<c:if test="${prevPage > -1}">
+			<sbTags:control text="Previous 5 Entries" href="${prevPage}"
+				classes="float-left shadow" shrinkwrap="true" imageClass="prev-btn" />
+		</c:if>
+	</div>
 
 </sbTags:template>
