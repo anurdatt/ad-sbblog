@@ -12,3 +12,4 @@ src/main/resources/static/libraries/syntaxhighlighter2/
 src/main/resources/static/libraries/dp.SyntaxHighlighter/
 src/main/webapp/testSyntax*.jsp
 src/main/webapp/WEB-INF/views/partials/text_editor_files3.jsp
+src/main/webapp/dist/
