@@ -1,5 +1,6 @@
-package org.anuran.springstudy.data.entities;
+package org.anuran.springstudy.data.validators;
 
+import org.anuran.springstudy.data.entities.Comment;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;

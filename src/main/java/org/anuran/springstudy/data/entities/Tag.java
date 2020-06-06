@@ -27,6 +27,19 @@ public class Tag {
 	@ManyToMany(mappedBy="tags")
 	private List<PostView> posts;
 	
+	public Tag() {
+
+	}
+
+	public Tag(String name) {
+		this.name = name;
+	}
+
+	public Tag(Integer tagId, String name) {
+		this.tagId = tagId;
+		this.name = name;
+	}
+	
 	public Integer getTagId() {
 		return tagId;
 	}

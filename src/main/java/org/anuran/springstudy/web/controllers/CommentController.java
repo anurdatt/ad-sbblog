@@ -37,7 +37,8 @@ public class CommentController {
 	public String save(@Validated @ModelAttribute Comment comment, BindingResult result, Model model,
 			HttpServletRequest request) {
 		Integer postId = comment.getPost().getPostId();
-		if (result.hasErrors() || !request.getParameter("mandatory").isEmpty()) {
+		//System.out.println("request.getParameter(\"mandatory\") = " + request.getParameter("mandatory"));
+		if (result.hasErrors() /*|| !request.getParameter("mandatory").isEmpty()*/) {
 			PostView post = blogService.getOnePost(postId);
 			List<TagView> tags = blogService.getAllTags(Sort.by(Direction.ASC, "name"));
 			model.addAttribute("post", post);

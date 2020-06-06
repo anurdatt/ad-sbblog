@@ -1,6 +1,6 @@
 package org.anuran.springstudy.data.entities;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,11 +12,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
-
 
 @Entity
 @Table(name="POST")
@@ -42,7 +43,12 @@ public class Post {
 	
 	@Column(name="SOURCE_CODE", columnDefinition="mediumtext")
 	String sourceCode;
-
+	
+	@ManyToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH}, targetEntity=Tag.class)
+	@JoinTable(name="POST_TAG", joinColumns={@JoinColumn(name="POST_ID", referencedColumnName="POST_ID")},
+	inverseJoinColumns={@JoinColumn(name="TAG_ID", referencedColumnName="TAG_ID")})
+	private List<Tag> tags = new ArrayList<Tag>();
+	
 	@OneToMany(fetch=FetchType.LAZY, mappedBy="post")
 	@OrderBy("postedDt DESC")
 	private List<Comment> comments = new ArrayList<Comment>();
@@ -94,6 +100,14 @@ public class Post {
 
 	public void setSourceCode(String sourceCode) {
 		this.sourceCode = sourceCode;
+	}
+
+	public List<Tag> getTags() {
+		return tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;
 	}
 
 	public List<Comment> getComments() {

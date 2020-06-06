@@ -2,6 +2,16 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+<%@ taglib uri="http://simpleBlog.cloudfoundry.com/sbTags" prefix="sbTags" %>
+<div>
+	<sec:authorize access="hasRole('ROLE_ADMIN')">
+		<c:if test="${isNew}">
+			<sbTags:control text="Create New Blog" href="/secure/post/new"
+				classes="shadow" imageClass="add-control-btn" />
+		</c:if>
+	</sec:authorize>
+</div>
 
 <div class="v-margin-20 h-margin-20">
 	<div class="bold fg3 v-margin-4 font-medium">Find Posts By Tag</div>

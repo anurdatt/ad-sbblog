@@ -5,7 +5,7 @@
 <%@ taglib uri="/WEB-INF/sbTags.tld" prefix="sbTags" %>
 
 <sbTags:template title="${post.title}" cssFiles="post.css,post_tags.css,comments.css"
- sideBar="blogSideBar.jsp">
+ sideBar="blogSideBar.jsp" requiresTextEditor="true">
 
 	<jsp:include page="../partials/post.jsp"></jsp:include>
 	<jsp:include page="../partials/comments.jsp"></jsp:include>

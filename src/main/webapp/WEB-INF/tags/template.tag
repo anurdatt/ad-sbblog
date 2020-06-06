@@ -34,12 +34,12 @@
 </c:if>
 <jsp:include page="/WEB-INF/views/partials/base_js.jsp"></jsp:include>
 
-<%-- <c:if test="${requiresTextEditor}">
+<c:if test="${requiresTextEditor}">
 	<jsp:include page="/WEB-INF/views/partials/text_editor_files.jsp"></jsp:include>
 	<script type="text/javascript">
 		SyntaxHighlighter.all();
 	</script>
-</c:if> --%>
+</c:if>
 
 <c:if test="${!empty jsFiles}">
 	<c:forEach var="jsFile" items="${fn:split(jsFiles, ',') }">
@@ -47,10 +47,10 @@
 			<c:when
 				test="${(empty pageContext.request.contextPath && !fn:contains(jsFile, '/js')) 
 				|| !fn:contains(jsFile, pageContext.request.contextPath)}">
-				<link rel="stylesheet" href="<c:url value="/js/${jsFile}" />" />
+				<script type="text/javascript" src="<c:url value="/js/${jsFile}" />" ></script>
 			</c:when>
 			<c:otherwise>
-				<link rel="stylesheet" href="${jsFile}" />" />
+				<script type="text/javascript" src="${jsFile}"></script>
 			</c:otherwise>
 		</c:choose>
 	</c:forEach>

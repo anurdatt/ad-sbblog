@@ -10,6 +10,7 @@
 	<%-- <div>
 		<c:out value="Total number of posts retrieved = ${posts.size()}" />
 	</div> --%>
+	<c:set var="isNew" value="true" scope="request"></c:set>
 	<c:forEach var="tmpPost" items="${posts}">
 		<c:set var="post" value="${tmpPost}" scope="request"></c:set>
 		<jsp:include page="/WEB-INF/views/partials/post.jsp"></jsp:include>

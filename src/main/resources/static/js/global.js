@@ -1,5 +1,7 @@
 $(document).ready(function () {
 	var application = new Application();
+	application.highlightSelectedMenu();
+	application.highlightMenuSelected();
 	application.setFocus();
 })
 
@@ -18,6 +20,7 @@ function Application(){
 //	});	
 //};
 
+
 Application.prototype.setFocus = function(){
 	var $errors = $(".error");
 	
@@ -34,4 +37,59 @@ Application.prototype.setFocus = function(){
 //		$username.focus();
 //	}
 };
- 
+
+Application.prototype.highlightMenuSelected = function(){
+	var url = document.location.pathname;
+	
+	
+	var $menuitems = $('#nav-menu ul li a');
+	if(url.startsWith('/post') || url.startsWith('/blog') || url.startsWith('/comment') 
+			|| url.startsWith('/secure/post') || url.startsWith('/secure/comment')){
+		//alert(url);
+		
+		for (var i=0; i<$menuitems.length; i++) {
+			if ($menuitems[i].innerText === "Blog") {
+				//$($menuitems[i]).addClass('highlight');
+				$($menuitems[i]).click();
+			}
+//			else {
+//				$($menuitems[i]).removeClass('highlight');
+//			}
+		}
+	}
+	else if (url.startsWith('/about')) {
+		for (var i=0; i<$menuitems.length; i++) {
+			if ($menuitems[i].innerText === "About") {
+				//$($menuitems[i]).addClass('highlight');
+				$($menuitems[i]).click();
+			}
+//			else {
+//				$($menuitems[i]).removeClass('highlight');
+//			}
+		}
+	}
+	else if (url.startsWith('/login')) {
+		for (var i=0; i<$menuitems.length; i++) {
+			if ($menuitems[i].innerText === "Admin") {
+				$($menuitems[i]).click();
+			}
+		}
+	}
+};
+
+
+Application.prototype.highlightSelectedMenu = function(){
+	var $menuitems = $('#nav-menu ul li a');
+	$menuitems.click(function(evt) {
+		//console.log($(this).context.innerText);
+		//	evt.preventDefault();
+		var text = $(this).context.innerText;
+		for (var i=0; i<$menuitems.length; i++) {
+			$($menuitems[i]).removeClass('highlight');
+			if ($menuitems[i].innerText === text) {
+				$($menuitems[i]).addClass('highlight');
+			}
+		}
+	});
+	
+}
