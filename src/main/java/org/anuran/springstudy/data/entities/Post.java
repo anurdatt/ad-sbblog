@@ -18,6 +18,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 @Entity
 @Table(name="POST")
@@ -38,6 +43,8 @@ public class Post {
 	@JoinColumn(name="POST_PART_ID")
 	private PostPart postPart;
 	
+	//@Temporal(TemporalType.TIMESTAMP)
+	@DateTimeFormat(/*iso=ISO.DATE_TIME,*/ pattern="yyyy-MM-dd hh:mm:SS.s")
 	@Column(name="POSTED_DT")
 	private Date postedDt;
 	

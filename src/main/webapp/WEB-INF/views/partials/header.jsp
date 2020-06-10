@@ -6,21 +6,6 @@
 <div id="header" class="bg3">
 	<div id="top-banner">
 		<div id="logo"></div>
-		<div id="logout">
-			<sec:authorize access="hasRole('ROLE_ADMIN')">
-				Logged in user:
-				<sec:authentication property="principal.username" />
-				| Roles:
-				<sec:authentication property="principal.authorities"/>
-				<div>
-					<c:url var="logoutUrl" value="/logout" />
-					<form action="${logoutUrl}" method="post">
-						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-						<input type="submit" value="LogOut">
-					</form>
-				</div>
-			</sec:authorize>
-		</div>
 		<div id="social-icons">
 			<a target="_blank" href="https://twitter.com/anuran4u"><img src="/images/twitter-482.png" /></a>
 			<a target="_blank" href="https://www.facebook.com/anuran.datta"><img src="/images/facebook-481.png" /></a>

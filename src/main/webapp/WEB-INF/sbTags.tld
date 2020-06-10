@@ -6,8 +6,8 @@
 	<tlib-version>1.2</tlib-version>
 	<jsp-version>2.0</jsp-version>
 	<short-name>sbTags</short-name>
-	<uri>http://simpleBlog.cloudfoundry.com/sbTags</uri>
-	<description>This tag lib supports common tags used across the simpleBlog web site.</description>
+	<uri>http://softBlog.cloudfoundry.com/sbTags</uri>
+	<description>This tag lib supports common tags used across the softBlog web site.</description>
 	
 	<tag-file>
 		<name>template</name>

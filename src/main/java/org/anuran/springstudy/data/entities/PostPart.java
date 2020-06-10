@@ -16,7 +16,7 @@ public class PostPart {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer postPartId;
 	
-	@Column(name="BODY", columnDefinition="text")
+	@Column(name="BODY", columnDefinition="longtext")
 	private String body;
 
 	public Integer getPostPartId() {

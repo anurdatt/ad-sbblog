@@ -3,6 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 
 <div class="post v-margin-20">
 	<div class="font-large bold">
@@ -32,7 +33,12 @@
 		</c:forEach>
 	</div>
 	<div class="v-margin-10 clearfix" >
-		
+		<sec:authorize access="hasRole('ROLE_ADMIN')">
+			<a href="<c:url value="/secure/post/delete/${post.postId}" />" 
+			class="button-32 delete-control-btn"></a>
+			<a href="<c:url value="/secure/post/edit/${post.postId}" />" 
+			class="button-32 edit-control-btn"></a>
+		</sec:authorize>
 		<c:if test="${!empty post.sourceCode}">
 			<a href="<c:url value="${post.sourceCode}" />" target="_blank" title="Source Code"
 				class="button-32 github-btn"></a>

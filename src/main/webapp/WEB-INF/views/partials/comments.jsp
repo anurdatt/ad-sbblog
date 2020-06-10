@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<%-- <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %> --%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 
 <c:if test="${fn:length(post.comments) > 0}">
 	<div class="comments v-margin-20">
@@ -18,9 +18,9 @@
 				<span class="bold subtle"><fmt:formatDate value="${comment.postedDt}" pattern="dd MMMM yyyy H:mm aa"/></span><br />
 				<span>${comment.body}</span>
 			
-				<%-- <sec:authorize access="hasRole('ROLE_ADMIN')">			
-						<a href="<c:url value="/secure/comment/${comment.commentId}/delete"/>" class="small-delete-btn h-margin-3"></a>
-				</sec:authorize> --%>
+				<sec:authorize access="hasRole('ROLE_ADMIN')">			
+					<a href="<c:url value="/secure/comment/${comment.commentId}/delete"/>" class="small-delete-btn h-margin-3"></a>
+				</sec:authorize>
 				<br />
 				<c:if test="${! empty comment.email}">
 					<a class="font-small" href="mailto:${comment.email}">Email</a>

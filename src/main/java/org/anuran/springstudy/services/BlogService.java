@@ -56,12 +56,12 @@ public class BlogService {
 		return commentRepository.save(comment);
 	}
 	
-	/*public void deleteComment(Comment comment) {
+	public void deleteComment(Comment comment) {
 		commentRepository.delete(comment);
 	}
 	
 	public Comment getOneComment(Integer commentid) {
 		return commentRepository.findById(commentid).get();	
-	}*/
+	}
 	
 }

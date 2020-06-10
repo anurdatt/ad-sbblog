@@ -12,6 +12,8 @@ import javax.persistence.Table;
 
 import org.anuran.springstudy.data.entities.views.PostView;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name="TAG")
 public class Tag {
@@ -25,6 +27,7 @@ public class Tag {
 	private String name;
 	
 	@ManyToMany(mappedBy="tags")
+	@JsonIgnore
 	private List<PostView> posts;
 	
 	public Tag() {

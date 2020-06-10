@@ -31,7 +31,7 @@
 	$.fn.sbTagEditor.defaultSettings = {
 		background : '#FFFFFF',
 		max_tags : 4,
-		param : "tags"
+		param : "csvTags"
 	};
 
 	function TagEditor($elem, settings) {
@@ -74,7 +74,7 @@
 		search : function(token) {
 			var that = this;
 			if (token && !this.isTagOptionsDisplayed) {
-				$.post(sbRoot + "/tag/find/" + token, function(data) {
+				$.get(sbRoot + "/tag/find/" + token, function(data) {
 					if (data.length > 1) {
 						that.createTagOptions(data);
 					} else if (data.length == 1) {
@@ -212,7 +212,7 @@
 			var that = this;
 			var _url = settings.url || settings || this.settings.url;
 
-			$.post(_url, function(data) {
+			$.get(_url, function(data) {
 				data = ($.isArray(data)) ? data : [ data ];
 				for ( var i = 0; i < data.length; i++) {
 					if (data) {
