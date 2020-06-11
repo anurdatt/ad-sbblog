@@ -4,9 +4,8 @@
 				src="https://s.gravatar.com/avatar/78b7529fba9fea752d845d768d54c033?s=80">
 		</div>
 		<div class="pdf-257 float-left">
-			<!-- <div class="font-large bold">Kevin Bowersox</div> -->
 			<div class="font-large bold">Anuran Datta</div>
-			<div class="font-medium subtle">Web Application Developer</div>
+			<div class="font-medium subtle">Application Developer</div>
 			<div class="v-margin-10">
 				<div class="clearfix">
 					<div class="left-cell-50 label">Phone</div>
