@@ -14,7 +14,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-<title>Ink-Drop "${title}"</title>
+<title>Soft Blog "${title}"</title>
 <!-- <meta name="google-site-verification" content="TWl2IyBn5Tg6pSDse_sG_TFQ6NoAl-HFkzqPAe2e0XE" /> -->
 
 <jsp:include page="/WEB-INF/views/partials/base_css.jsp"></jsp:include>

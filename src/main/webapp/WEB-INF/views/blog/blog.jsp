@@ -5,7 +5,7 @@
 <%@ taglib uri="/WEB-INF/sbTags.tld" prefix="sbTags" %>
 
 <sbTags:template title="All Posts" cssFiles="post.css,post_tags.css"
-	sideBar="blogSideBar.jsp">
+	sideBar="blogSideBar.jsp" requiresTextEditor="true">
 
 	<%-- <div>
 		<c:out value="Total number of posts retrieved = ${posts.size()}" />

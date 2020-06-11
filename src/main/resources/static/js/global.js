@@ -2,6 +2,7 @@ $(document).ready(function () {
 	var application = new Application();
 	application.highlightSelectedMenu();
 	application.highlightMenuSelected();
+	application.bindLogo();
 	application.setFocus();
 })
 
@@ -9,16 +10,16 @@ function Application(){
 	//window.confirm("I am executed");
 }
 
-//Application.prototype.bindLogo = function(){
-//	$("#logo").draggable({
-//		revert : true,
-//		stop : function(event, ui) {
-//			if(ui.position.left > $("#login").position().left){
-//				$("#login").fadeIn(700).css("display", "inline-block");
-//			}
-//		}
-//	});	
-//};
+Application.prototype.bindLogo = function(){
+	$("#logo").draggable({
+		revert : true,
+		stop : function(event, ui) {
+			if(ui.position.left > $("#login").position().left){
+				$("#login").fadeIn(700).css("display", "inline-block");
+			}
+		}
+	});	
+};
 
 
 Application.prototype.setFocus = function(){
@@ -31,11 +32,11 @@ Application.prototype.setFocus = function(){
 		return;
 	}
 	
-//	var $username = $("input[name='j_username']");
-//
-//	if($username.length >0){
-//		$username.focus();
-//	}
+	var $username = $("input[name='j_username']");
+
+	if($username.length >0){
+		$username.focus();
+	}
 };
 
 Application.prototype.highlightMenuSelected = function(){

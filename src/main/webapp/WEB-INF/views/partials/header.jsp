@@ -13,7 +13,7 @@
 	</div>
 	<div id="nav-menu" class="clearfix">
 		<ul>
-			<li class="font-large fg1"><a href="/blog/page/0">Blog</a></li><li class="font-large fg1"><a href="/about">About</a></li><li class="font-large fg1"><a href="/loginAdmin">Admin</a></li>
+			<li class="font-large fg1"><a href="/blog/page/0">Blog</a></li><li class="font-large fg1"><a href="/about">About</a></li><li id="login" class="font-large fg1"><a href="/loginAdmin">Admin</a></li>
 		</ul>
 	</div>
 </div>
