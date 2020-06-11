@@ -15,6 +15,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 <title>Soft Blog "${title}"</title>
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <!-- <meta name="google-site-verification" content="TWl2IyBn5Tg6pSDse_sG_TFQ6NoAl-HFkzqPAe2e0XE" /> -->
 
 <jsp:include page="/WEB-INF/views/partials/base_css.jsp"></jsp:include>
@@ -62,7 +63,7 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-41940964-1', 'simple-blog.rhcloud.com');
+  ga('create', 'UA-41940964-1', 'soft-blog.rhcloud.com');
   ga('send', 'pageview');
 
 </script> -->

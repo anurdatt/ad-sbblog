@@ -1,7 +1,7 @@
 <div class="v-bottom-margin-20 clearfix">
 		<div class="pdf-128 r-margin-20 float-left">
 			<img width="128" height="128" class="logo" alt=""
-				src="https://scontent-maa2-1.xx.fbcdn.net/v/t1.0-1/p240x240/21731289_10155565527021341_2371922266332775212_n.jpg?_nc_cat=106&oh=26a789d02359607a11cd804696508c59&oe=5C61CB48">
+				src="https://s.gravatar.com/avatar/78b7529fba9fea752d845d768d54c033?s=80">
 		</div>
 		<div class="pdf-257 float-left">
 			<!-- <div class="font-large bold">Kevin Bowersox</div> -->

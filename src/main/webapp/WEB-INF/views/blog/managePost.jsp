@@ -32,7 +32,7 @@ title="New Blog" requiresTextEditor="true">
 		<%-- <c:set var="hasPostedDt" value="false" />
 		<c:if test="${ ! empty post.postedDt}"><c:set var="hasPostedDt" value="true" /></c:if>
 		<input name="hasPostedDt" type="hidden" value="${hasPostedDt}" /> --%>
-		<%-- <input id="postedDt" name="postedDt" type="hidden" value="<fmt:formatDate pattern="yyyy-MM-dd hh:mm:SS.s" value="${post.postedDt}"/>" /> --%>
+		<input id="postedDt" name="postedDt" type="hidden" value="<fmt:formatDate pattern="yyyy-MM-dd hh:mm:SS.s" value="${post.postedDt}"/>" />
 		<input id="postId" name="postId" type="hidden" value="${post.postId}" />
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 	</form>
