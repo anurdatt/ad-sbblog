@@ -40,7 +40,7 @@ public class Post {
 	private String author;
 	
 	@OneToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
-	@JoinColumn(name="POST_PART_ID")
+	@JoinColumn(name="POST_PART_ID"/*, unique=true*/)
 	private PostPart postPart;
 	
 	//@Temporal(TemporalType.TIMESTAMP)
@@ -125,4 +125,79 @@ public class Post {
 		this.comments = comments;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((author == null) ? 0 : author.hashCode());
+		result = prime * result + ((comments == null) ? 0 : comments.hashCode());
+		result = prime * result + ((postId == null) ? 0 : postId.hashCode());
+		result = prime * result + ((postPart == null) ? 0 : postPart.hashCode());
+		result = prime * result + ((postedDt == null) ? 0 : postedDt.hashCode());
+		result = prime * result + ((sourceCode == null) ? 0 : sourceCode.hashCode());
+		result = prime * result + ((tags == null) ? 0 : tags.hashCode());
+		result = prime * result + ((title == null) ? 0 : title.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Post other = (Post) obj;
+		if (author == null) {
+			if (other.author != null)
+				return false;
+		} else if (!author.equals(other.author))
+			return false;
+		if (comments == null) {
+			if (other.comments != null)
+				return false;
+		} else if (!comments.equals(other.comments))
+			return false;
+		if (postId == null) {
+			if (other.postId != null)
+				return false;
+		} else if (!postId.equals(other.postId))
+			return false;
+		if (postPart == null) {
+			if (other.postPart != null)
+				return false;
+		} else if (!postPart.equals(other.postPart))
+			return false;
+		if (postedDt == null) {
+			if (other.postedDt != null)
+				return false;
+		} else if (!postedDt.equals(other.postedDt))
+			return false;
+		if (sourceCode == null) {
+			if (other.sourceCode != null)
+				return false;
+		} else if (!sourceCode.equals(other.sourceCode))
+			return false;
+		if (tags == null) {
+			if (other.tags != null)
+				return false;
+		} else if (!tags.equals(other.tags))
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Post [postId=" + postId + ", title=" + title + ", author=" + author + ", postPart=" + postPart
+				+ ", postedDt=" + postedDt + ", sourceCode=" + sourceCode + ", tags=" + tags + ", comments=" + comments
+				+ "]";
+	}
+
+	
 }

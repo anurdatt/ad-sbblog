@@ -6,7 +6,7 @@
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 
 <sbTags:template>
-	<sec:authorize access="hasRole('ROLE_ADMIN')">
+	<sec:authorize access="hasAnyRole('ROLE_ADMIN, ROLE_USER')">
 		<c:set var="loggedIn" value="true"></c:set>
 	</sec:authorize>
 	<c:choose>

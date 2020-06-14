@@ -82,6 +82,7 @@ public class SecurePostController {
 		post.setAuthor("Anuran Datta");
 		post.setTags(tagCreatorUtil.createTags(csvTags));
 
+		System.out.println("Saving post = " + post.toString());
 		postRepository.save(post);
 		
 		return "redirect:/blog/page/0";

@@ -1,5 +1,6 @@
 package org.anuran.springstudy.configs;
 
+import org.anuran.springstudy.services.DBUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,6 +9,8 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler;
 import org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestWrapper;
 
@@ -20,7 +23,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	public DefaultWebSecurityExpressionHandler defaultWebSecurityExpressionHandler() {
 		return new DefaultWebSecurityExpressionHandler();
 	}
-
+	
+	@Bean
+	public UserDetailsService dbUserDetailsService() {
+		return new DBUserDetailsService();
+	}
+	
+	@Bean
+	public BCryptPasswordEncoder bCryptPasswordEncoder() {
+		return new BCryptPasswordEncoder(11);
+	}
+	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		//http
@@ -90,9 +103,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
 	protected void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-		auth.inMemoryAuthentication().withUser("anuran").password("{noop}password")
-		.roles("ADMIN");
-		
-		
+		//auth.inMemoryAuthentication().withUser("anuran").password("{noop}password")
+		//.roles("ADMIN");
+		auth.userDetailsService(dbUserDetailsService()).passwordEncoder(bCryptPasswordEncoder());
 	}
 }

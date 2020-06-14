@@ -34,6 +34,7 @@ title="New Blog" requiresTextEditor="true">
 		<input name="hasPostedDt" type="hidden" value="${hasPostedDt}" /> --%>
 		<input id="postedDt" name="postedDt" type="hidden" value="<fmt:formatDate pattern="yyyy-MM-dd hh:mm:SS.s" value="${post.postedDt}"/>" />
 		<input id="postId" name="postId" type="hidden" value="${post.postId}" />
+		<input id="postPartId" name="postPart.postPartId" type="hidden" value="${post.postPart.postPartId}" />
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 	</form>
 	<div class="spacer"></div>
