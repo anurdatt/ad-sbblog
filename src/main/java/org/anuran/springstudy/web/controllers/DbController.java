@@ -17,6 +17,9 @@ public class DbController {
 	@Autowired
 	private DataSource dataSource;
 
+	@Autowired
+	private String dbURL;
+	
 	@RequestMapping("/db")
 	String db(Model model) {
 		try (Connection connection = dataSource.getConnection()) {
@@ -29,8 +32,8 @@ public class DbController {
 			while (rs.next()) {
 				output.add("Read from DB: " + rs.getTimestamp("tick"));
 			}
-
 			model.addAttribute("records", output);
+			model.addAttribute("dbUrl", dbURL);
 			return "db";
 		} catch (Exception e) {
 			model.addAttribute("message", e.getMessage());

@@ -28,5 +28,14 @@ public class AppConfig {
 			return new HikariDataSource(config);
 		}
 	}
+	
+	@Bean
+	public String dbURL() {
+		if (dbUrl == null || dbUrl.isEmpty()) {
+			return new String("");
+		} else {
+			return new String(dbUrl);
+		}
+	}
 
 }

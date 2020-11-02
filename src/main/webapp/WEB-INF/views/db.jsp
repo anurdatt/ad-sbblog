@@ -4,6 +4,8 @@
 <body>
 
 <div class="container">
+  <c:set var="dbURL" value="${dbUrl}"></c:set>
+  <h1>Database URL: ${dbURL}</h1>
   <h1>Database Output</h1>
   <ul>
   	<c:forEach var="record" items="${records}">
