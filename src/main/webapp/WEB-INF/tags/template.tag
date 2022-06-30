@@ -16,7 +16,18 @@
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 <title>Soft Blog "${title}"</title>
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-<!-- <meta name="google-site-verification" content="TWl2IyBn5Tg6pSDse_sG_TFQ6NoAl-HFkzqPAe2e0XE" /> -->
+<meta name="google-site-verification" content="DDbtZV5qssqplVc_JQmOBQdd_Dr79cWfTnTXcwmLaDs" />
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-XXXXX-Y', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
 
 <jsp:include page="/WEB-INF/views/partials/base_css.jsp"></jsp:include>
 <c:if test="${!empty cssFiles}">
@@ -56,20 +67,6 @@
 		</c:choose>
 	</c:forEach>
 </c:if>
-
-<!-- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-41940964-1', 'soft-blog.rhcloud.com');
-  ga('send', 'pageview');
-
-</script> -->
-<!-- <meta name="google-site-verification" content="ih5hR8pc2tKIyfgiX9PYZggje0VEQger9avVgxABF-0" /> -->
-
-
 
 </head>
 

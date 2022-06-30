@@ -1,0 +1,2 @@
+https://ad-sbblog.herokuapp.com/blog/page/0
+https://ad-sbblog.herokuapp.com/about
