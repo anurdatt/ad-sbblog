@@ -24,21 +24,19 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'G-52RT6G89KD', 'auto');
+ga('create', 'UA-234403541-1', 'auto');
 ga('send', 'pageview');
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-52RT6G89KD"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-000Y8XLT0N"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-52RT6G89KD');
+  gtag('config', 'G-000Y8XLT0N');
 </script>
-
-<!-- End Google Analytics -->
 
 <jsp:include page="/WEB-INF/views/partials/base_css.jsp"></jsp:include>
 <c:if test="${!empty cssFiles}">
