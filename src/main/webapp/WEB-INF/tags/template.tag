@@ -17,16 +17,6 @@
 <title>Soft Blog "${title}"</title>
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <meta name="google-site-verification" content="DDbtZV5qssqplVc_JQmOBQdd_Dr79cWfTnTXcwmLaDs" />
-<!-- Google Analytics -->
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-234403541-1', 'auto');
-ga('send', 'pageview');
-</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-000Y8XLT0N"></script>
@@ -37,6 +27,17 @@ ga('send', 'pageview');
 
   gtag('config', 'G-000Y8XLT0N');
   gtag('config', 'UA-234403541-1');
+</script>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-234403541-1', 'auto');
+ga('send', 'pageview');
 </script>
 
 <jsp:include page="/WEB-INF/views/partials/base_css.jsp"></jsp:include>
