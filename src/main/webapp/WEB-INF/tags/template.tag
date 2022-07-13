@@ -24,9 +24,20 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-XXXXX-Y', 'auto');
+ga('create', 'G-2LZXP5YDJT', 'auto');
 ga('send', 'pageview');
 </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2LZXP5YDJT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2LZXP5YDJT');
+</script>
+
 <!-- End Google Analytics -->
 
 <jsp:include page="/WEB-INF/views/partials/base_css.jsp"></jsp:include>
