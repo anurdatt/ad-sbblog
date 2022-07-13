@@ -36,6 +36,7 @@ ga('send', 'pageview');
   gtag('js', new Date());
 
   gtag('config', 'G-000Y8XLT0N');
+  gtag('config', 'UA-234403541-1');
 </script>
 
 <jsp:include page="/WEB-INF/views/partials/base_css.jsp"></jsp:include>
