@@ -7,10 +7,12 @@ import org.anuran.springstudy.annotations.PageableRequest;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
+@Component
 public class PageableRequestInterceptor extends HandlerInterceptorAdapter {
 
 	private static final Logger logger = LoggerFactory.getLogger(PageableRequestInterceptor.class);
@@ -18,6 +20,11 @@ public class PageableRequestInterceptor extends HandlerInterceptorAdapter {
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
+		logger.debug("In Interceptor postHandle - before HandlerMethod check");
+		if (!(handler instanceof HandlerMethod)) {
+			return;
+		}
+		logger.debug("In Interceptor postHandle - after HandlerMethod check");
 		HandlerMethod method = (HandlerMethod) handler;
 		PageableRequest annotation = method.getMethodAnnotation(PageableRequest.class);
 		

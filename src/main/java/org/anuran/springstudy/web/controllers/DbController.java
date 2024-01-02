@@ -20,7 +20,7 @@ public class DbController {
 	@Autowired
 	private String dbURL;
 	
-	/*@RequestMapping("/db")
+	@RequestMapping("/db")
 	String db(Model model) {
 		try (Connection connection = dataSource.getConnection()) {
 			Statement stmt = connection.createStatement();
@@ -39,6 +39,6 @@ public class DbController {
 			model.addAttribute("message", e.getMessage());
 			return "error";
 		}
-	}*/
+	}
 
 }

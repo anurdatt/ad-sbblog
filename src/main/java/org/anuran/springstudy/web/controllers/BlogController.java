@@ -26,6 +26,7 @@ public class BlogController {
 			
 	@RequestMapping("/")
 	public String index() {
+		System.out.println("Index page hit");
 		return "index";
 	}
 	

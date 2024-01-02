@@ -6,7 +6,7 @@
   <groupId>org.anuran.springbootstudy</groupId>
   <artifactId>ad-sbblog</artifactId>
   <version>1.0</version>
-
+  <packaging>war</packaging>
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -113,10 +113,21 @@
   </dependencies>
 
   <build>
+<!--      <resources>-->
+<!--          <resource>-->
+<!--              <directory>src/main/webapp</directory>-->
+<!--          </resource>-->
+<!--          <resource>-->
+<!--              <directory>src/main/resources</directory>-->
+<!--          </resource>-->
+<!--      </resources>-->
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+<!--        <configuration>-->
+<!--            <executable>true</executable>-->
+<!--        </configuration>-->
         <executions>
           <execution>
             <goals>
